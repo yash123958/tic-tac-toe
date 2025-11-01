@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0E0E10; /* deeper dark background */
+    color: #EAEAEA;
+    text-align: center;
+    margin: 80px;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 15px;
+    border: none;
+    background: #1C1C1E; /* smooth gray tile */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5),
+                inset 0 0 8px rgba(255, 255, 255, 0.05);
+    font-size: 60px;
+    color: #6BCB77; /* default color (O) */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.box.x {
+    color: #F15BB5; /* X color - soft pink */
+}
+
+.box.o {
+    color: #00BBF9; /* O color - teal blue */
+}
+
+.box:hover {
+    background: #252528;
+    transform: scale(1.06);
+    box-shadow: 0 0 20px rgba(107, 203, 119, 0.3);
+}
+
+.reset {
+    border: none;
+    border-radius: 30px;
+    padding: 1rem 2.2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    background: linear-gradient(135deg, #00BBF9 0%, #9B5DE5 100%);
+    box-shadow: 0 0 18px rgba(0, 187, 249, 0.4);
+    transition: all 0.3s ease;
+}
+
+.reset:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(155, 93, 229, 0.6);
+}
+
+#msg {
+    color: #FFD166; /* soft golden yellow for winner text */
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 209, 102, 0.6);
+}
+
+.hide {
+    display: none;
+}
+
+.msg-container {
+    margin: 35px;
+}
+
